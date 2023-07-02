@@ -3,9 +3,12 @@ Given('I visit {string}') do |string|
 end
   
 When('I search for {string}') do |string|
-    find('')
+    #sleep 2 if !page.has_css('#twotabsearchtextbox')
+    find('#twotabsearchtextbox').click
+    find('#twotabsearchtextbox').set(string)
+    find('.nav-search-submit').click
 end
 
 Then('I should see search results for {string}') do |string|
-pending # Write code here that turns the phrase above into concrete actions
+    expect((first('.a-text-normal').text)).to include('results for "' + string + '"')
 end

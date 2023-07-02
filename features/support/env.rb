@@ -1,5 +1,7 @@
 require 'capybara/cucumber'
 require 'selenium-webdriver'
+require 'pry'
+require 'rspec'
 
 
 options = Selenium::WebDriver::Chrome::Options.new
