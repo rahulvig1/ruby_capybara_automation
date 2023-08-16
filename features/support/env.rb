@@ -2,6 +2,9 @@ require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'pry'
 require 'rspec'
+require_relative '../pages/base_page'
+require_relative '../pages/amazon_main_page'
+
 
 
 options = Selenium::WebDriver::Chrome::Options.new

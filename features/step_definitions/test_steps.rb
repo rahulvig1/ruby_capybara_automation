@@ -1,11 +1,10 @@
 Given('I visit {string}') do |string|
-    visit string
+    @home_page = AmazonMain.new
+    @home_page.open_url(string)
 end
   
 When('I search for {string}') do |string|
-    find('#twotabsearchtextbox').click
-    find('#twotabsearchtextbox').set(string)
-    find('.nav-search-submit').click
+    @home_page.search_item(string)
 end
 
 Then('I should see search results for {string}') do |string|
