@@ -1,3 +1,5 @@
+require_relative '../pages/amazon_main_page'
+
 Given('I visit {string}') do |string|
     @home_page = AmazonMain.new
     @home_page.open_url(string)

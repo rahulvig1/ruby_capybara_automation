@@ -3,7 +3,6 @@ require 'selenium-webdriver'
 require 'pry'
 require 'rspec'
 require_relative '../pages/base_page'
-require_relative '../pages/amazon_main_page'
 
 
 
